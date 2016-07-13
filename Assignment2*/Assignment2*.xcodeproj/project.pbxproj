@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE8EB3501D3445E4001AA926 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8EB34F1D3445E4001AA926 /* File.swift */; };
+		FE8EB3521D3445FB001AA926 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8EB3511D3445FB001AA926 /* Engine.swift */; };
 		FED698AF1D2C2FC4003368DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED698AE1D2C2FC4003368DE /* AppDelegate.swift */; };
 		FED698B11D2C2FC4003368DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED698B01D2C2FC4003368DE /* MainViewController.swift */; };
 		FED698B41D2C2FC4003368DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED698B21D2C2FC4003368DE /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE8EB34F1D3445E4001AA926 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FE8EB3511D3445FB001AA926 /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		FED698AB1D2C2FC4003368DE /* Assignment2*.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment2*.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED698AE1D2C2FC4003368DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED698B01D2C2FC4003368DE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				FED698C01D2C3AA1003368DE /* Problem1ViewController.swift */,
 				FED698C21D2C3AB9003368DE /* Problem2ViewController.swift */,
 				FED698C41D2C3ACA003368DE /* Problem3ViewController.swift */,
+				FE8EB34F1D3445E4001AA926 /* File.swift */,
+				FE8EB3511D3445FB001AA926 /* Engine.swift */,
 				FED698C61D2C3AD4003368DE /* Problem4ViewController.swift */,
 				FED698B51D2C2FC4003368DE /* Assets.xcassets */,
 				FED698B71D2C2FC4003368DE /* LaunchScreen.storyboard */,
@@ -149,8 +155,10 @@
 			files = (
 				FED698C11D2C3AA1003368DE /* Problem1ViewController.swift in Sources */,
 				FED698C51D2C3ACA003368DE /* Problem3ViewController.swift in Sources */,
+				FE8EB3501D3445E4001AA926 /* File.swift in Sources */,
 				FED698C31D2C3AB9003368DE /* Problem2ViewController.swift in Sources */,
 				FED698C71D2C3AD4003368DE /* Problem4ViewController.swift in Sources */,
+				FE8EB3521D3445FB001AA926 /* Engine.swift in Sources */,
 				FED698B11D2C2FC4003368DE /* MainViewController.swift in Sources */,
 				FED698AF1D2C2FC4003368DE /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +312,7 @@
 				FED698BF1D2C2FC4003368DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

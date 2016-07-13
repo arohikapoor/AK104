@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6B-dD-Suy" customClass="GridView" customModule="Assignment3" customModuleProvider="target">
+                                <rect key="frame" x="60" y="60" width="480" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k6B-dD-Suy" secondAttribute="height" multiplier="1:1" id="OhT-yd-z5i"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rows">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="livingColor">
+                                        <color key="value" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bornColor">
+                                        <color key="value" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cols">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="diedColor">
+                                        <color key="value" white="0.33333333333333331" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gridColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gridWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dDr-BJ-tGw" appends="YES" id="Oax-Vy-Ekh"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubv-ac-bmH" userLabel="RunContainer">
+                                <rect key="frame" x="60" y="540" width="480" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xz-X6-Vbx">
+                                        <rect key="frame" x="225" y="15.5" width="30" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Run"/>
+                                        <connections>
+                                            <action selector="Run:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fIX-gM-Flo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Xz-X6-Vbx" firstAttribute="centerY" secondItem="Ubv-ac-bmH" secondAttribute="centerY" id="6Pr-Sj-mDt"/>
+                                    <constraint firstItem="2Xz-X6-Vbx" firstAttribute="centerX" secondItem="Ubv-ac-bmH" secondAttribute="centerX" id="sxj-kX-Zrd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k6B-dD-Suy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5fL-ic-XFx"/>
+                            <constraint firstItem="Ubv-ac-bmH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9hf-H0-uPe"/>
+                            <constraint firstItem="k6B-dD-Suy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G1v-Rl-aiZ"/>
+                            <constraint firstItem="k6B-dD-Suy" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="H7x-OI-sLv"/>
+                            <constraint firstItem="k6B-dD-Suy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="750" id="HcV-pe-hsC"/>
+                            <constraint firstItem="k6B-dD-Suy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="HdQ-eh-W6j"/>
+                            <constraint firstItem="k6B-dD-Suy" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="YUE-Pw-EAu"/>
+                            <constraint firstItem="Ubv-ac-bmH" firstAttribute="width" secondItem="k6B-dD-Suy" secondAttribute="width" id="gw9-SE-Lfr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ubv-ac-bmH" secondAttribute="bottom" id="ige-G0-Ydb"/>
+                            <constraint firstItem="Ubv-ac-bmH" firstAttribute="top" secondItem="k6B-dD-Suy" secondAttribute="bottom" id="sXf-St-5e3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyGrid" destination="k6B-dD-Suy" id="cH3-Xc-eLr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dDr-BJ-tGw">
+                    <connections>
+                        <action selector="Touch:" destination="BYZ-38-t0r" id="ja4-YC-C86"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="262" y="339"/>
+        </scene>
+    </scenes>
+</document>

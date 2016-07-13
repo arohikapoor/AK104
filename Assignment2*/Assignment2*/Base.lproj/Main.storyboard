@@ -25,13 +25,6 @@
                                     <segue destination="vjD-2B-Qrc" kind="show" id="PhO-YR-Q7a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vC-oR-T4P">
-                                <rect key="frame" x="265" y="155" width="70" height="30"/>
-                                <state key="normal" title="Problem 2"/>
-                                <connections>
-                                    <segue destination="2up-OE-RQF" kind="show" id="GMZ-VW-FVq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJu-yk-Mrc">
                                 <rect key="frame" x="265" y="415" width="71" height="30"/>
                                 <state key="normal" title="Problem 4"/>
@@ -39,13 +32,20 @@
                                     <segue destination="SHf-si-9y8" kind="show" id="IP4-TK-TPx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vC-oR-T4P">
+                                <rect key="frame" x="266" y="173" width="70" height="30"/>
+                                <state key="normal" title="Problem 2"/>
+                                <connections>
+                                    <segue destination="2up-OE-RQF" kind="show" id="GMZ-VW-FVq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="d5u-Ny-Wit" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4d3-VV-Ajt"/>
-                            <constraint firstItem="d5u-Ny-Wit" firstAttribute="top" secondItem="5vC-oR-T4P" secondAttribute="bottom" constant="100" id="AdD-RI-qXa"/>
+                            <constraint firstItem="d5u-Ny-Wit" firstAttribute="top" secondItem="5vC-oR-T4P" secondAttribute="bottom" constant="82" id="AdD-RI-qXa"/>
                             <constraint firstItem="cJu-yk-Mrc" firstAttribute="top" secondItem="d5u-Ny-Wit" secondAttribute="bottom" constant="100" id="Al3-0T-8I4"/>
-                            <constraint firstItem="5vC-oR-T4P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XbM-Vg-YUf"/>
+                            <constraint firstItem="5vC-oR-T4P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="XbM-Vg-YUf"/>
                             <constraint firstItem="d5u-Ny-Wit" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTe-Iz-h0N"/>
                             <constraint firstItem="cJu-yk-Mrc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pbH-Tg-lwG"/>
                         </constraints>
