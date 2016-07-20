@@ -50,7 +50,7 @@ protocol GridProtocol {
     var cols: Int { get }
     var grid: [[CellState]] { get set }
     func neighbors(Coordinates: (col: Int, row: Int)) -> [(col: Int, row: Int)]
-    subscript(cols: Int, rows: Int) -> CellState? { get set }
+    subscript(cols: Int, rows: Int) -> CellState { get set }
 }
 
 protocol EngineDelegate{

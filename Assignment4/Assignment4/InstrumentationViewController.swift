@@ -11,8 +11,20 @@ import UIKit
 //Please note: I made the icon for the Tab corresponding this View/ViewController 
 
 
+
+
 class InstrumentationViewController: UIViewController, UITextFieldDelegate {
     
+    //NOTE: The stepper works by itself, meaning that when touched it updates the UI Field. If the user types a number in the UIField and then clicks on the stepper, then too the stepper works and increments from the value already in the UIField. However, it seems when the UIField is updated programatically calling UIField.text, the IBAction function isn't called thus, the grid which is updated within it doesn't update. Instead, I tried to create a notification for when the UIField is set, however it doesn't seem to be working. The function to be notified doesn't get notified meaning the notificaiton isn't received. I can't figure out why.
+    
+    //NOTE1a) It seems I'm confused about how my stepper should interact with the rest of the code. The way I have it set up right now, it SHOULD: when user inputs a number of rows into text field the rows should update to that value. when the stepper is clicked it should then increment on the value the user put in the field already. or vice versa. Thus, what I do is keep track of whether the stepper value was incremented or decremented and it adds to the UITextField value. I then want that to trigger a change in the StandardEngine.rows and StandardEngine.grid. However, this last past does not occur.
+    
+    //NOTE2: When I type in the UIField for rows and columns, the grid DOES update however, it takes some times for the Field to record that editing has ended it seems. I have to click elsewhere and sometimes touch different tabs to see the change in the Grid. I'm not sure why this is.
+    
+    //NOTE3: the refresh switch and slider both work
+    
+    @IBOutlet weak var StepperRow: UIStepper!
+    @IBOutlet weak var StepperCol: UIStepper!
     @IBOutlet weak var Switch: UISwitch!
     @IBOutlet weak var RowsBox: UITextField! {
         didSet{
@@ -109,6 +121,7 @@ class InstrumentationViewController: UIViewController, UITextFieldDelegate {
         if let text = sender.text , interval = Int(text){
             rows = interval
         }
+        StepperRow.value = Double(rows)
         StandardEngine.sharedInstance.grid = Grid(COLS: StandardEngine.sharedInstance.cols, ROWS:Int(rows))
         StandardEngine.sharedInstance.rows = rows
     }
@@ -121,16 +134,15 @@ class InstrumentationViewController: UIViewController, UITextFieldDelegate {
         }
         StandardEngine.sharedInstance.grid = Grid(COLS: cols, ROWS:StandardEngine.sharedInstance.cols)
         StandardEngine.sharedInstance.cols = cols
+        StepperCol.value = Double(cols)
     }
-    
-    
-    
-    //NOTE: The stepper works by itself, meaning that when touched it updates the UI Field. If the user types a number in the UIField and then clicks on the stepper, then too the stepper works and increments from the value already in the UIField. However, it seems when the UIField is updated programatically calling UIField.text, the IBAction function isn't called thus, the grid which is updated within it doesn't update. Instead, I tried to create a notification for when the UIField is set, however it doesn't seem to be working. The function to be notified doesn't get notified meaning the notificaiton isn't received. I can't figure out why.
-    
-    //NOTE2: When I type in the UIField for rows and columns, the grid does update however, it takes some times for the Field to record that editing has ended it seems. I have to click elsewhere and sometimes touch different tabs to see the change in the Grid. I'm not sure why this is. 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        StepperRow.value = Double(StandardEngine.sharedInstance.rows)
+        StepperCol.value = Double(StandardEngine.sharedInstance.cols)
+        RowsBox.text = String(StandardEngine.sharedInstance.rows)
+        ColumnsBox.text = String(StandardEngine.sharedInstance.cols)
 
         NSNotificationCenter.defaultCenter().addObserver(self,
                                                          selector:#selector(self.rowstextFieldChanged(_:)),
@@ -146,7 +158,6 @@ class InstrumentationViewController: UIViewController, UITextFieldDelegate {
     
     //Function that gets notified when rows textFieldChanges
     func rowstextFieldChanged(notification:NSNotification){
-        print ("I got notified")
         var rows = StandardEngine.sharedInstance.rows
         if let text = RowsBox.text , interval = Int(text){
             rows = interval

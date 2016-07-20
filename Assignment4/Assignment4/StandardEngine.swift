@@ -111,7 +111,7 @@ class StandardEngine: EngineProtocol{
                     }
                     
                     //current Cell's cellState
-                    let current:CellState = self.grid[i,j]!
+                    let current:CellState = self.grid[i,j]
                     
                     
                     //if the Current Cell is alive (born/living) and less than 2 of its neighbors are alive, then it dies in the next generation. If current state is .Died then it will be Empty in the next generation. If the current state is .Empty then it continues to be so.

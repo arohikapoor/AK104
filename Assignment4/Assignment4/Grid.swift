@@ -33,19 +33,19 @@ class Grid: GridProtocol{
         return [(oneRight,y),(oneLeft,y),(x,oneUp),(x,oneDown),(oneRight,oneUp),(oneLeft,oneUp),(oneRight,oneDown),(oneLeft,oneDown)]
     }
     
-    subscript(cols: Int, rows: Int) -> CellState? {
+    subscript(cols: Int, rows: Int) -> CellState {
         get {
             let c = cols
             let r = rows
-            if r < 0 || r >= self.rows || c < 0 || c >= self.cols { return nil }
+            if r < 0 || r >= self.rows || c < 0 || c >= self.cols { return .Empty }
             return grid[c][r]
         }
         set (newValue) {
-            if newValue == nil { return }
+            //if newValue == nil { return }
             let c = cols
             let r = rows
             if r < 0 || r >= self.rows || c < 0 || c >= self.cols { return }
-            self.grid[c][r] = newValue!
+            self.grid[c][r] = newValue
         }
     }
 }
