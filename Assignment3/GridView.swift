@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @IBDesignable class GridView: UIView {
     
     
@@ -92,7 +93,7 @@ import UIKit
                         path.fill()
                     }
                 }
-            }
+        }
     }
     
     //Problem 6:
@@ -135,4 +136,15 @@ import UIKit
         let rect = CGRect(x: x, y: y, width: cellWidth, height: cellHeight)
         self.setNeedsDisplayInRect(rect)
     }
+    
+    
+    //update method () -- that is same as update above. it is called when run button is pressed and it is also called when touched 
+    // both of them change the cellstate grid 
+    // run should use only step to change the cell state grid
+    // passing in before which doesn't just return array of after bools but also changes [[cellState]]
+    // touch should use ? to change the cell state grid
+        //first 
+        // basically something that looks at before and after and changes [[cellstate]]
+    //then call update
+    
 }

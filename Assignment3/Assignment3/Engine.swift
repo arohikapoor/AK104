@@ -33,7 +33,7 @@ func gridUpdate(before: [[Bool]], after: [[Bool]]) -> [[CellState]]{
             
             if (before[i][j] == false && after[i][j] == true){
                 grid[i][j] = CellState.Born
-                
+
             }
             
             if (before[i][j] == false && after[i][j] == false){

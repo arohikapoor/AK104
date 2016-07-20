@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     //Problem 5: sends the points of the location touched by the user to the method that updates the Cell's color in GridView
     @IBAction func Touch(sender: UITapGestureRecognizer) {
         let a = sender.locationInView(MyGrid)
+        //This doesn't work properly because it doesn't change the before array in my grid to incorporate the change of one toggle switch. So when run is hit again it forgets that the state for this was switched.
         MyGrid.updateTouch(a)
+        
     }
     
     @IBOutlet weak var MyGrid: GridView!
@@ -30,8 +32,6 @@ class ViewController: UIViewController {
                     }
                 }
             }
-
-            
             //I update the gridView's CellState grid, which is used to update color value based on a comparison of the before and after values of the 2D-Array<Bool>
             MyGrid.grid = gridUpdate(temp, after: MyGrid.before)
             
