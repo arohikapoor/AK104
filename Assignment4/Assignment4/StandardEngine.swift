@@ -151,6 +151,7 @@ class StandardEngine: EngineProtocol{
                 }
             }
         }
+
         return tempGrid
     }
     
