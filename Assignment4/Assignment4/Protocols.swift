@@ -48,19 +48,18 @@ protocol GridProtocol {
     init(COLS: Int, ROWS: Int)
     var rows: Int { get }
     var cols: Int { get }
-    var grid: [[CellState]] { get set }
     func neighbors(Coordinates: (col: Int, row: Int)) -> [(col: Int, row: Int)]
     subscript(cols: Int, rows: Int) -> CellState { get set }
 }
 
-protocol EngineDelegate{
+protocol  EngineDelegate: class {
     func engineDidUpdate(withGrid: GridProtocol)
 }
 
 
 // I will be setting the default value for refreshRate in its implementation as per our class discussion on not providing protocols with deault implementations and as per the discussion post on Canvas. 
 protocol EngineProtocol {
-    var delegate: EngineDelegate? { get set }
+    weak var delegate: EngineDelegate? { get set }
     var grid: GridProtocol { get }
     var refreshRate: Double { get set }
     var refreshTimer: NSTimer? { get set}

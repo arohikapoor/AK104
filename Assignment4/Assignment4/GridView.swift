@@ -25,6 +25,7 @@ import Foundation
         }
     }
     
+    //When points is updated, grid is updated
     
     @IBInspectable var livingColor: UIColor = UIColor(red: CGFloat(0),green: CGFloat(0.8), blue: CGFloat(0.2), alpha: CGFloat(1.0))
     
@@ -39,6 +40,7 @@ import Foundation
     var cellHeight: CGFloat = 0
     var gridSizeWidth: CGFloat = 0
     var gridSizeHeight: CGFloat = 0
+    var points:[(Col: Int, Row: Int)]!
     
     //Draws my grid
     override func drawRect(rect: CGRect) {
@@ -49,6 +51,7 @@ import Foundation
         
         let gridPath = UIBezierPath()
         gridPath.lineWidth = gridWidth
+        
         
         for i in 0...cols{
             gridPath.moveToPoint(CGPoint(
@@ -98,7 +101,11 @@ import Foundation
     //Called by my delegate whenever my Grid is changed
     func update(withGrid: GridProtocol) {
 
-        grid = withGrid.grid
+        for i in 0..<cols{
+            for j in 0..<rows{
+                grid[i][j] = withGrid[i,j]
+            }
+        }
         
         //When the rows or columns in the grid are changed and the grid needs to be drawn again
         if self.rows != withGrid.rows || self.cols != withGrid.cols {

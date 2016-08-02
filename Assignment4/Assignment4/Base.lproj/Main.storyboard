@@ -206,7 +206,6 @@
                     <connections>
                         <outlet property="ColumnsBox" destination="J1I-di-QvK" id="1VQ-7e-oAt"/>
                         <outlet property="RefreshRate" destination="jCT-w4-WYH" id="hj9-QB-JNH"/>
-                        <outlet property="Rows" destination="zlu-yq-Kgx" id="6JS-YA-PVi"/>
                         <outlet property="RowsBox" destination="zlu-yq-Kgx" id="FJ3-V8-gBT"/>
                         <outlet property="StepperCol" destination="9ek-r1-LKc" id="CY9-vS-Cgi"/>
                         <outlet property="StepperRow" destination="Kkn-pM-qX4" id="jay-t0-SYV"/>
@@ -240,6 +239,14 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IR1-ze-Rzd" secondAttribute="height" multiplier="1:1" id="ybI-ze-4ax"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gridColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="G3C-mB-i5P" appends="YES" id="08V-3U-2iH"/>
                                 </connections>
