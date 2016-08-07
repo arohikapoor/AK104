@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 class StandardEngine: EngineProtocol{
-    
-    //make lazy
     private static var _sharedInstance = StandardEngine(COLS: 10, ROWS: 10)
     static var sharedInstance: StandardEngine {
         get {
@@ -141,6 +139,21 @@ class StandardEngine: EngineProtocol{
     @objc func timerDidFire(timer:NSTimer) {
         self.grid = self.step()
     }
+    
+//    func takePoints(points: [(Col:Int,Row:Int)]) -> GridProtocol{
+//        var tempGrid: GridProtocol = Grid(cols: self.cols,rows: self.rows)
+//        for i in points{
+//            tempGrid[i.Col, i.Row] = .Alive
+//        }
+//        
+//        self.grid = tempGrid
+//        if let delegate = delegate { delegate.engineDidUpdate(self.grid) }
+//        let n = NSNotification(name: "GridChangeNotification", object: nil, userInfo: nil)
+//        NSNotificationCenter.defaultCenter().postNotification(n)
+//        
+//        return self.grid
+//    }
+    
 
 
 }

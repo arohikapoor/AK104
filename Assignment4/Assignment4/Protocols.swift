@@ -50,6 +50,10 @@ protocol GridProtocol {
     var cols: Int { get }
     func neighbors(Coordinates: (col: Int, row: Int)) -> [(col: Int, row: Int)]
     subscript(cols: Int, rows: Int) -> CellState { get set }
+//    var alive:  Int { get }
+//    var born:   Int { get }
+//    var died:   Int { get }
+//    var empty:  Int { get }
 }
 
 protocol  EngineDelegate: class {

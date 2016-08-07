@@ -105,7 +105,7 @@ class InstrumentationViewController: UIViewController, UITextFieldDelegate {
         if Switch.on {
             engine.refreshRate = Double(sender.value)
         }
-    }
+    }https://dl.dropboxusercontent.com/u/7544475/S65g.json
     
     @IBAction func SwitchPressed(sender: UISwitch) {
         if Switch.on {
