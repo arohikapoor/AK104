@@ -194,7 +194,7 @@ class TableViewController: UITableViewController {
     //adds new configuration on button action
     @IBAction func AddNewConfiguration(sender: UIBarButtonItem) {
         
-        addConfiguration([(StandardEngine.sharedInstance.cols/2,StandardEngine.sharedInstance.rows/2)], name: "New Configuration")
+        addConfiguration([(0,0)], name: "New Configuration")
         
         //forces segue to gridEditor
         let rowToSelect:NSIndexPath = NSIndexPath(forRow: titles.count - 1, inSection: 0);
